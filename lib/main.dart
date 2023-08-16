@@ -16,6 +16,15 @@ class MyApp extends StatelessWidget {
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+
+        primarySwatch: Colors.pink,
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+          titleMedium: const TextStyle(
+            fontSize: 20,
+            fontFamily: 'RobotoCondensed',
+          ),
+        ),
       ),
       home: const CategoriesScreen(),
     );
