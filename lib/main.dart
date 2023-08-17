@@ -1,3 +1,4 @@
+import 'package:app_repeat/screens/categories_meals_screen.dart';
 import 'package:app_repeat/screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +14,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Vamos Cozinhar?',
       theme: ThemeData(
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-
         primarySwatch: Colors.pink,
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-          titleMedium: const TextStyle(
-            fontSize: 20,
-            fontFamily: 'RobotoCondensed',
-          ),
-        ),
+              titleMedium: const TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
+              ),
+            ),
       ),
       home: const CategoriesScreen(),
+      routes: {
+        '/categories-meals': (context) => const CategoriesMealsScreen(),
+      },
     );
   }
 }
